@@ -13,7 +13,7 @@ const Avatar: React.FC<AvatarProps> = ({ height = 12, width = 12 }) => {
       height={height}
       width={width}
       className="object-cover w-full h-full"
-      src="https://raw.githubusercontent.com/vinhphuphan/vinhphuphan.github.io/refs/heads/main/src/assets/img/Cutbody.jpg"
+      src="https://raw.githubusercontent.com/vinhphuphan/Portfolio-nextjs/refs/heads/main/public/images/Cutbody.jpg"
     />
 
   );
