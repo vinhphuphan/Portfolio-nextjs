@@ -47,7 +47,7 @@ const MyStack = () => {
 
         {/* Heading */}
         <div className="flex flex-col gap-2 mb-10">
-          <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-medium text-primary">Tech Stack</h2>
+          <h2 className="text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-primary">Tech Stack</h2>
         </div>
 
         <div className="flex flex-col gap-10">
