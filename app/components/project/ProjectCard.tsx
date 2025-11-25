@@ -7,7 +7,8 @@ import { AiFillGithub } from "react-icons/ai";
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description?: string;
+  children?: React.ReactNode;
   year: string;
   link: string;
   github_link: string;
@@ -17,6 +18,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
+  children,
   year,
   link,
   github_link,
@@ -34,7 +36,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Project title */}
           <div className="text-lg md:text-xl lg:text-2xl 2xl:text-4xl font-normal text-primary">{title}</div>
           {/* Description */}
-          <div className="text-[10px] md:text-sm font-normal 2xl:font-base text-primary">{description}</div>
+          {children ? (
+            <div className="text-[10px] md:text-sm font-normal 2xl:font-base text-primary">
+              {children}
+            </div>
+          ) : (
+            <div className="text-[10px] md:text-sm font-normal 2xl:font-base text-primary">
+              {description}
+            </div>
+          )}
         </div>
       </div>
 

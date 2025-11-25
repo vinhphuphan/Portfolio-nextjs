@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Container from "../Container";
 import ProjectCard from "./ProjectCard";
 
@@ -27,14 +28,34 @@ const ProjectSection = () => {
 
           {/* Project 1 */}
           <ProjectCard
-            key={"project1"}
+            key="project1"
             title="EasyDining"
             year="2025"
-            description="A full-stack restaurant system that simplify restaurant workflow through  QR-based ordering and a integrated POS management dashboard.(Demo login: admin / 123456)"
             link="https://dashboard.easydining.site"
             github_link="https://github.com/vinhphuphan/EasyDining"
             background_class="bg-project1"
-          />
+          >
+            <p>
+              A full-stack restaurant system that simplifies restaurant workflow through QR-based ordering and an
+              integrated POS management dashboard.
+            </p>
+
+            <p className="mt-2">
+              Demo Login: <span className="font-bold text-primary">admin</span> / <span className="font-bold text-primary">123456</span>
+            </p>
+
+            {/* Scan to Order Section */}
+            <div className="flex items-center gap-6 mt-3">
+              <span className="text-md text-primary font-semibold">Scan To Order</span>
+              <div className="p-4 rounded-xl shadow-lg">
+                <img
+                  src="https://raw.githubusercontent.com/vinhphuphan/EasyDining/refs/heads/main/design/light/scan-to-order-A2.png"
+                  alt="QR Code"
+                  className="w-20 h-20"
+                />
+              </div>
+            </div>
+          </ProjectCard>
 
         </div>
       </Container>
